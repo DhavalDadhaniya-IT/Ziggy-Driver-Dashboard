@@ -27,7 +27,7 @@ function logInButton(){
     cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function(result) {
             var accessToken = result.getAccessToken().getJwtToken();
-            window.location.href = "driver-profile.html";
+            window.location.href = "dashboard/demo.html";
             console.log(accessToken);
         },
 

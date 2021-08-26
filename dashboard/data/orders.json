@@ -1,0 +1,51 @@
+{   "orders":
+    [ 
+        {
+            "order_id":"001",
+            "company_name":"Uber Eat",
+            "pickup_location":"34.04|45.98",
+            "dropoff_location":"34.04|45.98",
+            "pickup_time":"9.30am",
+            "order_time_exp":"04-08-2021 09.50am",
+            "revanue":"10",
+            "timestamp":"04-08-2021 09.50am"
+        },
+        {
+            "order_id":"002",
+            "company_name":"Zomato",
+            "pickup_location":"34.04|45.98",
+            "dropoff_location":"34.04|45.98",
+            "pickup_time":"9.30am",
+            "timestamp":"04-08-2021 09.50am"
+               
+        },
+        {
+            "order_id":"003",
+            "company_name":"Deliveroo",
+            "pickup_location":"34.04|45.98",
+            "dropoff_location":"34.04|45.98",
+            "pickup_time":"9.30am",
+            "timestamp":"04-08-2021 09.50am"
+               
+        },
+        {
+            "order_id":"004",
+            "company_name":"DoorStep",
+            "pickup_location":"34.04|45.98",
+            "dropoff_location":"34.04|45.98",
+            "pickup_time":"9.30am",
+            "timestamp":"04-08-2021 09.50am"
+               
+        },
+        {
+            "order_id":"005",
+            "company_name":"SPoint",
+            "pickup_location":"34.04|45.98",
+            "dropoff_location":"34.04|45.98",
+            "pickup_time":"9.30am",
+            "timestamp":"04-08-2021 09.50am"
+               
+        }
+
+    ]    
+}
