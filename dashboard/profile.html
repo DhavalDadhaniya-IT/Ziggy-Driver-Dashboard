@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ziggy | Dashboard</title>
+    <title>Driver's Profile</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -237,10 +237,10 @@
               />
             </div>
             <div class="info">
-              <a href="profile.html" class="d-block" id="driver_name" target="_blank">Alexander Pierce</a>
+              <a href="" class="d-block" id="driver_name">Alexander Pierce</a>
             </div>
           </div>
-
+          <!-- syntax ../driverprofile/driverprofile.html >
           <!-- Sidebar Menu -->
           <nav class="mt-2">
             <ul
@@ -264,90 +264,80 @@
                       data-on-color="success"/>
               </li>
               <br>
-              <li class="nav-item menu-open">
+              <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
-                    Dashboard
+                    Your Profile
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
               </li>
+              <br>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-book"></i>
-                  <p>
-                    Configuration
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a
-                      href="pages/generate_orders.html"
-                      target="_blank"
-                      class="nav-link"
-                    >
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Generate Orders</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/profile.html" class="nav-link">
-                      <i class="far fa-user nav-icon"></i>
-                      <p>Driver Profile</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/profile.html" class="nav-link">
-                      <i class="far fa-user-circle nav-icon"></i>
-                      <p>Driver Preferences</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/contacts.html" class="nav-link">
-                      <i class="far fa-question-circle nav-icon"></i>
-                      <p>Customer Care</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/faq.html" class="nav-link">
-                      <i class="far fa-question-circle nav-icon"></i>
-                      <p>FAQ</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/contact-us.html" class="nav-link">
-                      <i class="far fa-question-circle nav-icon"></i>
-                      <p>Contact us</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="https://adminlte.io/docs/3.1/" class="nav-link">
-                  <i class="nav-icon fas fa-file"></i>
-                  <p>Documentation</p>
-                </a>
-              </li>
-              <li class="nav-header">LABELS</li>
+             <!-- stop watch -->
+             <div id="timer"></div>
+              <div id="time" style="color:white">Time: 0</div>
+              <button id="one" type="button" data-index="0">Start Time</button>
+              <button id="two" type="button" data-index="2">Stop Time</button>
+
+              <script type="text/javascript">
+                var seconds = 0,
+                  time = 0,
+                  index = 0,
+                  timerStarted = false;
+
+              function countdown(sec) {
+                  seconds = sec;
+                  tick();
+              }
+
+              function tick() {
+                  var counter = document.getElementById("timer");
+                  seconds--;
+                  counter.innerHTML = "Time : " + String(seconds);
+                  if (seconds > 60 && Score < 30) {
+                      alert("Not enough Score");
+                  }
+                  if (seconds > 0) {
+                      setTimeout(tick, 1000);
+                  }
+              }
+
+              $("#one, #two").click(function () {
+                  if(!timerStarted) {
+                      countdown(60);
+                      timerStarted = true;
+                  }
+                  var dataIndex = $(this).data('index');
+                  if (index == dataIndex) {
+                      Score++;
+                      if(dataIndex == 2) {
+                          index = 0;
+                      } else {
+                         index++;   
+                    
+              </script>
+             <br>
+            <!-- end -->
+
+              <li class="nav-header">Aggregators / Vendor Registration</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-circle text-danger"></i>
-                  <p class="text">Important</p>
+                  <p class="text">McDonald's</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-circle text-warning"></i>
-                  <p>Warning</p>
+                  <p>Burger King</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-circle text-info"></i>
-                  <p>Informational</p>
+                  <p>Wendy's</p>
                 </a>
               </li>
               <li class="nav-header">Notification</li>
@@ -373,15 +363,18 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Dashboard</h1>
+                <h1 class="m-0">Welcome Alexander !!</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="demo.html">Dashboard</a></li>
+                  <li class="breadcrumb-item active">Profile</li>
                   <li class="breadcrumb-item"><a href="#">Log Out</a></li>
-                  
                 </ol>
+
               </div>
+             
               <!-- /.col -->
             </div>
             <!-- /.row -->
@@ -397,7 +390,7 @@
               <div class="col-lg-12">
                 <div class="card">
                   <div class="card-header border-0">
-                    <h3 class="card-title">My Orders</h3>
+                    <h3 class="card-title">Personal Details</h3>
 
                     <div class="card-tools">
                       <a href="#" class="btn btn-tool btn-sm">
@@ -415,33 +408,28 @@
                     >
                       <thead>
                         <tr>
-                          <th>OrderID</th>
-                          <th>Company</th>
-                          <th>PickUp</th>
-                          <th>DropOff</th>
-                          <th>Order Time</th>
-                          <th>PickUp Time</th>
-                          <th>Total Distance</th>
-                          
+                          <th>Name</th>
+                          <th>Alexander Pierce</th>
+                                                 
                         </tr>
                         <tr>
-                          <td>ZD001</td>
-                          <td>Amazon</td>
-                          <td>Dharnidhar</td>
-                          <td>Ghod Dod Road</td>
-                          <td>9 AM</td>
-                          <td>200 KM</td>
-                          <td>8 AM</td>
+                          <th>Mobile Number</th>
+                          <th>+91 9875641235</th>
+                                             
                         </tr>
                          <tr>
-                          <td>ZD002</td>
-                          <td>SHC E Bike</td>
-                          <td>Dharnidhar</td>
-                          <td>Vasna</td>
-                          <td>2 AM</td>
-                          <td>2 KM</td>
-                          <td>1 AM</td>
+                          <th>Email ID</th>
+                          <th>alex@ziggy.com</th>
+                                                                       
                         </tr>
+                         <tr>
+                          <th>Bank Account</th>
+                          <th>Central Bank</th>
+                           <th>Account Number: 0564789510</th>
+                            <th>IFSC: CB0ADI</th>
+                                             
+                        </tr>
+                      
                       </thead>
                       <tbody></tbody>
                     </table>
@@ -455,14 +443,21 @@
 
                 <div class="card card-secondary">
                   <div class="card-header">
-                    <h3 class="card-title">Travel Mode</h3>
+                    <h3 class="card-title">Service Type</h3>
                   </div>
                   <div class="card-body">
+                    <label>Service Type</label>
+                    <select class="form-control">
+                      <option>Food</option>
+                      <option>Courier</option>
+                      <option>Passenger</option>
+                    </select>
                     <label>Travel Mode</label>
                     <select class="form-control">
                       <option>Bicycle</option>
-                      <option>Bike</option>
+                      <option>Bike / 2 Wheeler</option>
                       <option>Car</option>
+                      <option>Truck</option>
                     </select>
                 
                  </div>
@@ -497,6 +492,8 @@
                           infowindow.open(map, marker);
                       });
                   }
+
+
                   </script>  
                   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKq7RERv63ohJASCHa26bClB29VxIZFeg&callback=myMap"></script>  
                                  </div>
