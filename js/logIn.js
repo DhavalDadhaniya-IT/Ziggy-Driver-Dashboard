@@ -1,8 +1,4 @@
-var email;
-var password;
-var poolData;
-
-function logInButton(){
+function logIn(){
     var authenticateData = {
         Username: document.getElementById("semail").value,
         Password: document.getElementById("spassword").value
@@ -27,7 +23,32 @@ function logInButton(){
     cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function(result) {
             var accessToken = result.getAccessToken().getJwtToken();
-            window.location.href = "dashboard/demo.html";
+
+            //POTENTIAL: Region needs to be set if not already set previously elsewhere.
+		    AWS.config.region = _config.cognito.region;
+
+            AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+                IdentityPoolId: _config.cognito.userPoolId, // your identity pool id here
+                Logins: {
+                    // Change the key below according to the specific region your user pool is in.
+                    'cognito-idp.us-east-1.amazonaws.com/us-east-1_JRUYNllt9': result
+                        .getIdToken()
+                        .getJwtToken(),
+                },
+            });
+
+            //refreshes credentials using AWS.CognitoIdentity.getCredentialsForIdentity()
+            AWS.config.credentials.refresh(error => {
+                if (error) {
+                    console.error(error);
+                } else {
+                    // Instantiate aws sdk service objects now that the credentials have been updated.
+                    // example: var s3 = new AWS.S3();
+                    console.log('Successfully logged!');
+                }
+            });
+            
+            window.location.href = "dashboard/dashboard.html";
             console.log(accessToken);
         },
 

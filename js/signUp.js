@@ -1,14 +1,9 @@
-var email;
-var password;
-var personalname;
-var poolData;
+function signUp(){
+	var personalname = document.getElementById("rname").value;
+	var email = document.getElementById("remail").value;
+	var password = document.getElementById("rpassword").value;
 
-function registerButton(){
-	personalname = document.getElementById("rname").value;
-	email = document.getElementById("remail").value;
-	password = document.getElementById("rpassword").value;
-
-	poolData = {
+	var poolData = {
 		UserPoolId: _config.cognito.userPoolId, // Your user pool id here
 		ClientId: _config.cognito.clientId // Your client id here
 	};
@@ -34,10 +29,9 @@ function registerButton(){
 	attributeList.push(attributePersonalName);
 
 	userPool.signUp(email, password, attributeList, null, function(err, result) {
-		// console.log(result);
-		// console.log(err);
 		if (err) {
-			// console.log(err.message);
+			console.error(err);
+			console.error(err.message);
 			alert(err.message || JSON.stringify(err));
 			return;
 		}
