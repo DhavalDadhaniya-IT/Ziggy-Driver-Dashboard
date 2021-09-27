@@ -1,0 +1,23 @@
+<------------Cognito Response to Lambda Function-------------->
+{
+    "version": "1", 
+    "region": "us-east-1", 
+    "userPoolId": "us-east-1_JRUYNllt9", 
+    "userName": "4993cd72-54fa-40a5-a16b-c3181e545a81", 
+    "callerContext": {
+        "awsSdkVersion": "aws-sdk-unknown-unknown", 
+        "clientId": "5fptupivmiadi96bmna7rgk3is"
+    }, 
+    "triggerSource": "PostConfirmation_ConfirmSignUp", 
+    "request": {
+        "userAttributes": {
+            "sub": "4993cd72-54fa-40a5-a16b-c3181e545a81", 
+            "email_verified": "true", 
+            "cognito:user_status": "CONFIRMED", 
+            "cognito:email_alias": "dhruvshah924@gmail.com", 
+            "name": "Dhruv Shah", 
+            "email": "dhruvshah924@gmail.com"
+        }
+    }, 
+    "response": {}
+}

@@ -23,9 +23,9 @@
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.6.10.min.js"></script>
     <script src="../js/config.js"></script>
     <script type="text/javascript" src="../js/signout.js"></script>
-
+    <script type="text/javascript" src="../js/fetch-driver-data.js"></script>
   </head>
-  <body class="hold-transition sidebar-mini">
+  <body class="hold-transition sidebar-mini" onload="fetchDriverData()">
     <div class="wrapper">
       <!-- Navbar -->
       <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -162,8 +162,7 @@
               </a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item dropdown-footer"
-                >See All Messages</a
-              >
+                >See All Messages</a>
             </div>
           </li>
           <!-- Notifications Dropdown Menu -->
@@ -223,7 +222,7 @@
         <a href="#" class="brand-link">
           <img
             src="dist/img/AdminLTELogo.png"
-            alt="AdminLTE Logo"
+            alt="AdminLTE Logoj"
             class="brand-image img-circle elevation-3"
             style="opacity: 0.8"
           />
@@ -242,7 +241,7 @@
               />
             </div>
             <div class="info">
-              <a href="profile.html" class="d-block" id="driver_name" target="_blank">Alexander Pierce</a>
+              <a href="profile.html" class="d-block" id="driver_name" target="_self">Alexander Pierce</a>
             </div>
           </div>
 
