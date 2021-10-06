@@ -3,7 +3,7 @@ function logIn(){
         Username: document.getElementById("semail").value,
         Password: document.getElementById("spassword").value
     };
-    event.preventDefault(); 
+    event.preventDefault();
     var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticateData);
 
     var poolData = {
@@ -22,7 +22,7 @@ function logIn(){
 
     cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function(result) {
-            var accessToken = result.getAccessToken().getJwtToken();
+            var accessToken = result.getIdToken().getJwtToken();
 
             //POTENTIAL: Region needs to be set if not already set previously elsewhere.
 		    AWS.config.region = _config.cognito.region;
@@ -47,9 +47,11 @@ function logIn(){
                     console.log('Successfully logged!');
                 }
             });
-            
+
+            // console.log(accessToken);
+            localStorage.setItem('access_token', accessToken);
+
             window.location.href = "dashboard/dashboard.html";
-            console.log(accessToken);
         },
 
         onFailure: function(err) {
