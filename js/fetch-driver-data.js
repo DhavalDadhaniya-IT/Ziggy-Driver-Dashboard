@@ -18,11 +18,11 @@ function fetchDriverData() {
     //Then with the data from the response in JSON...
     .then((data) => {
         console.log('Success:', data);
-        document.getElementById("dname").innerHTML = data["data"].Name.S;
         document.getElementById("driver_name").innerHTML = data["data"].Name.S;
-        document.getElementById("d2_name").innerHTML = data["data"].Name.S;
+        document.getElementById("dname").innerHTML = data["data"].Name.S;
         document.getElementById("demail").innerHTML = data["data"].Email_Id.S;
         document.getElementById("dphone").innerHTML = data["data"].Mobile_Number.N;
+        document.getElementById("d2_name").innerHTML = data["data"].Name.S;
     })
     //Then with the error genereted...
     .catch((error) => {

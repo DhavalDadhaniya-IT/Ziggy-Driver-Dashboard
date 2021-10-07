@@ -19,7 +19,7 @@
 		/>
 		<!-- Theme style -->
 		<link rel="stylesheet" href="dist/css/adminlte.min.css" />
-		<link rel="stylesheet" type="text/css" href="styles/profile.css" />
+		<script type="text/javascript" src="../js/signout.js"></script>
 		<script type="text/javascript" src="../js/fetch-driver-data.js"></script>
 		<style>
 
@@ -103,181 +103,7 @@
 						</a>
 					</li>
 					<li class="nav-item d-none d-sm-inline-block">
-						<a href="index3.html" class="nav-link">Home</a>
-					</li>
-					<li class="nav-item d-none d-sm-inline-block">
-						<a href="#" class="nav-link">Contact</a>
-					</li>
-				</ul>
-
-				<!-- Right navbar links -->
-				<ul class="navbar-nav ml-auto">
-					<!-- Navbar Search -->
-					<li class="nav-item">
-						<a
-							class="nav-link"
-							data-widget="navbar-search"
-							href="#"
-							role="button"
-						>
-							<i class="fas fa-search"></i>
-						</a>
-						<div class="navbar-search-block">
-							<form class="form-inline">
-								<div class="input-group input-group-sm">
-									<input
-										class="form-control form-control-navbar"
-										type="search"
-										placeholder="Search"
-										aria-label="Search"
-									/>
-									<div class="input-group-append">
-										<button class="btn btn-navbar" type="submit">
-											<i class="fas fa-search"></i>
-										</button>
-										<button
-											class="btn btn-navbar"
-											type="button"
-											data-widget="navbar-search"
-										>
-											<i class="fas fa-times"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</li>
-
-					<!-- Messages Dropdown Menu -->
-					<li class="nav-item dropdown">
-						<a class="nav-link" data-toggle="dropdown" href="#">
-							<i class="far fa-comments"></i>
-							<span class="badge badge-danger navbar-badge">3</span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-							<a href="#" class="dropdown-item">
-								<!-- Message Start -->
-								<div class="media">
-									<img
-										src="dist/img/user1-128x128.jpg"
-										alt="User Avatar"
-										class="img-size-50 mr-3 img-circle"
-									/>
-									<div class="media-body">
-										<h3 class="dropdown-item-title">
-											Brad Diesel
-											<span class="float-right text-sm text-danger"
-												><i class="fas fa-star"></i
-											></span>
-										</h3>
-										<p class="text-sm">Call me whenever you can...</p>
-										<p class="text-sm text-muted">
-											<i class="far fa-clock mr-1"></i> 4 Hours Ago
-										</p>
-									</div>
-								</div>
-								<!-- Message End -->
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<!-- Message Start -->
-								<div class="media">
-									<img
-										src="dist/img/user8-128x128.jpg"
-										alt="User Avatar"
-										class="img-size-50 img-circle mr-3"
-									/>
-									<div class="media-body">
-										<h3 class="dropdown-item-title">
-											John Pierce
-											<span class="float-right text-sm text-muted"
-												><i class="fas fa-star"></i
-											></span>
-										</h3>
-										<p class="text-sm">I got your message bro</p>
-										<p class="text-sm text-muted">
-											<i class="far fa-clock mr-1"></i> 4 Hours Ago
-										</p>
-									</div>
-								</div>
-								<!-- Message End -->
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<!-- Message Start -->
-								<div class="media">
-									<img
-										src="dist/img/user3-128x128.jpg"
-										alt="User Avatar"
-										class="img-size-50 img-circle mr-3"
-									/>
-									<div class="media-body">
-										<h3 class="dropdown-item-title">
-											Nora Silvester
-											<span class="float-right text-sm text-warning"
-												><i class="fas fa-star"></i
-											></span>
-										</h3>
-										<p class="text-sm">The subject goes here</p>
-										<p class="text-sm text-muted">
-											<i class="far fa-clock mr-1"></i> 4 Hours Ago
-										</p>
-									</div>
-								</div>
-								<!-- Message End -->
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item dropdown-footer"
-								>See All Messages</a
-							>
-						</div>
-					</li>
-					<!-- Notifications Dropdown Menu -->
-					<li class="nav-item dropdown">
-						<a class="nav-link" data-toggle="dropdown" href="#">
-							<i class="far fa-bell"></i>
-							<span class="badge badge-warning navbar-badge">15</span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-							<span class="dropdown-item dropdown-header"
-								>15 Notifications</span
-							>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<i class="fas fa-envelope mr-2"></i> 4 new messages
-								<span class="float-right text-muted text-sm">3 mins</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<i class="fas fa-users mr-2"></i> 8 friend requests
-								<span class="float-right text-muted text-sm">12 hours</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<i class="fas fa-file mr-2"></i> 3 new reports
-								<span class="float-right text-muted text-sm">2 days</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item dropdown-footer"
-								>See All Notifications</a
-							>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-widget="fullscreen" href="#" role="button">
-							<i class="fas fa-expand-arrows-alt"></i>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a
-							class="nav-link"
-							data-widget="control-sidebar"
-							data-slide="true"
-							href="#"
-							role="button"
-						>
-							<i class="fas fa-th-large"></i>
-						</a>
+						<a href="dashboard.html" class="nav-link">Home</a>
 					</li>
 				</ul>
 			</nav>
@@ -302,16 +128,15 @@
 					<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 						<div class="image">
 							<img
-								src="dist/img/user2-160x160.jpg"
+								src="dist/image/blank-profile.png"
 								class="img-circle elevation-2"
 								alt="User Image"
 							/>
 						</div>
 						<div class="info">
-							<a href="" class="d-block" id="driver_name"></a>
+							<a href="profile.html" class="d-block" id="driver_name"></a>
 						</div>
 					</div>
-					<!-- syntax ../driverprofile/driverprofile.html -->
 					<!-- Sidebar Menu -->
 					<nav class="mt-2">
 						<ul
@@ -322,102 +147,61 @@
 						>
 							<!-- Add icons to the links using the .nav-icon class
 									 with font-awesome or any other icon font library -->
-						<li class="nav-item">
-						<label style="color:white;size: 12px;">Auto Pilot Mode</label>
-						<input
-							type="checkbox"
-							name="my-checkbox"
-							checked
-							data-bootstrap-switch
-							data-off-color="danger"
-							data-on-color="success"
-						/>
-						</li>
-							<br>
+
 							<li class="nav-item">
-								<a href="#" class="nav-link active">
+								<a href="dashboard.html" class="nav-link">
 									<i class="nav-icon fas fa-tachometer-alt"></i>
 									<p>
-										Your Profile
+										Dashboard
 										<i class="right fas fa-angle-left"></i>
 									</p>
 								</a>
 							</li>
-							<br>
-
-						 <!-- stop watch -->
-						 <div id="timer"></div>
-							<!-- <div id="time" style="color:white">Time: 0</div>
-							<button id="one" type="button" data-index="0">Start Time</button>
-							<button id="two" type="button" data-index="2">Stop Time</button>
-
-							<script type="text/javascript">
-								var seconds = 0,
-									time = 0,
-									index = 0,
-									timerStarted = false;
-
-							function countdown(sec) {
-									seconds = sec;
-									tick();
-							}
-
-							function tick() {
-									var counter = document.getElementById("timer");
-									seconds--;
-									counter.innerHTML = "Time : " + String(seconds);
-									if (seconds > 60 && Score < 30) {
-											alert("Not enough Score");
-									}
-									if (seconds > 0) {
-											setTimeout(tick, 1000);
-									}
-							}
-
-							$("#one, #two").click(function () {
-									if(!timerStarted) {
-											countdown(60);
-											timerStarted = true;
-									}
-									var dataIndex = $(this).data('index');
-									if (index == dataIndex) {
-											Score++;
-											if(dataIndex == 2) {
-													index = 0;
-											} else {
-												 index++;
-											}
-									}
-							})
-							</script>
-						 <br> -->
-						<!-- end -->
-
-							<!-- <li class="nav-header">Aggregators / Vendor Registration</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="aggregator.html" class="nav-link">
 									<i class="nav-icon far fa-circle text-danger"></i>
-									<p class="text">McDonald's</p>
+									<p>
+										Aggregator / Vendor-Registration
+										<i class="right far fa-angle-left"></i>
+									</p>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="profile.html" class="nav-link active">
 									<i class="nav-icon far fa-circle text-warning"></i>
-									<p>Burger King</p>
+									<p>
+										Profile Page
+										<i class="right far fa-angle-left"></i>
+									</p>
 								</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item" onclick="signOut()">
 								<a href="#" class="nav-link">
 									<i class="nav-icon far fa-circle text-info"></i>
-									<p>Wendy's</p>
+									<p>
+										Logout
+										<i class="right far fa-angle-left"></i>
+									</p>
 								</a>
-							</li> -->
-							<li class="nav-header">Notification</li>
+							</li>
+							<br>
+							<!-- <li class="nav-header">Notification</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link">
 									<i class="nav-icon far fa-life-ring"></i>
 									<p class="text-warning">Collision Notification</p>
 								</a>
+							</li> -->
+							<li class="nav-item">
+								<label style="color:white;size: 12px;">Auto Pilot Mode</label>
+								<input
+									type="checkbox"
+									name="my-checkbox"
+									checked
+									data-bootstrap-switch
+									data-off-color="danger"
+									data-on-color="success"
+								/>
 							</li>
 						</ul>
 					</nav>
@@ -435,17 +219,6 @@
 							<div class="col-sm-6">
 								<h1 class="m-0">Welcome <span id="d2_name"></span> !!</h1>
 							</div>
-							<!-- /.col -->
-							<div class="col-sm-6">
-								<ol class="breadcrumb float-sm-right">
-									<li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-									<li class="breadcrumb-item active">Profile</li>
-									<li class="breadcrumb-item"><a href="#">Log Out</a></li>
-								</ol>
-
-							</div>
-
-							<!-- /.col -->
 						</div>
 						<!-- /.row -->
 					</div>
@@ -461,138 +234,111 @@
 								<div class="card">
 									<div class="card-header border-0">
 										<h3 class="card-title">Personal Details</h3>
-
-										<div class="card-tools">
-											<a href="#" class="btn btn-tool btn-sm">
-												<i class="fas fa-download"></i>
-											</a>
-											<a href="#" class="btn btn-tool btn-sm">
-												<i class="fas fa-bars"></i>
-											</a>
-										</div>
 									</div>
-
-
-
 									<div class="card-body table-responsive p-0">
 										<div class="flex-container">
-
 											<div style="display:inline">
-
-														<form action="" method="post" enctype="multipart/form-data">
-		    										<label for="fileToUpload">
-		 												<div class="profile-pic" >
-		      									<span class="glyphicon glyphicon-camera"></span>
-
-		  											</div>
-		  											</label>
-		  											<input type="File" name="fileToUpload" id="fileToUpload">
-														</form>
+												<form action="" method="post" enctype="multipart/form-data">
+													<br>
+													<img src="dist/image/blank-profile.png">
+												</form>
 											</div>
 											<br>
 											<div style="display: inline;">
-										<table
-											class="table table-striped table-valign-middle" id="id_orders_table" style="border-collapse: collapse;">
-										<thead>
+												<table
+													class="table table-striped table-valign-middle" 
+													id="id_orders_table" 
+													style="border-collapse: collapse;">
+													<thead>
+														<tr style="border: solid white">
+															<th>Name</th>
+															<!-- <td>Alexander Pierce</td> -->
+															<td><span id="dname"></span></td>
+														</tr>
+														<tr style="border: solid white">
+															<th>Mobile Number</th>
+															<!-- <td>+91 9875641235</td> -->
+															<td><span id="dphone"></span></td>
+														</tr>
+														<tr style="border: solid white" >
+															<th>Email ID</th>
+															<!-- <td>alex@ziggy.com</td> -->
+															<td><span id="demail"></span></td>
+														</tr>
+														<tr style="border: solid white">
+															<th>Service Type</th>
+															<th style="display:inline-block; font-size: 14px; border: none;">
+																<label for="food" align="center">Food&nbsp;
+																	<input type="checkbox" name="food" id="food" onclick="">
+																	<!-- <select class="form-control" id="DDL" disabled="disabled" style="font-size: 14px;">
+																	<option>McDonald's</option>
+																	<option>KFC</option>
+																	</select> -->
 
-												<tr style="border: solid white">
-													<th>Name</th>
-													<!-- <td>Alexander Pierce</td> -->
-													<td><span id="dname"></span></td>
-												</tr>
-												<tr style="border: solid white">
-													<th>Mobile Number</th>
-													<!-- <td>+91 9875641235</td> -->
-													<td><span id="dphone"></span></td>
-												</tr>
-												 <tr style="border: solid white" >
-													<th>Email ID</th>
-													<!-- <td>alex@ziggy.com</td> -->
-													<td><span id="demail"></span></td>
-													</tr>
+																	</label>
+															</th>
 
-													<tr style="border: solid white">
-
-													<th>Service Type</th>
-
-													<th style="display:inline-block; font-size: 14px; border: none;">
-														<label for="food" align="center">Food&nbsp;
-															<input type="checkbox" name="food" id="food" onclick="checkenable(this)">
-															<select class="form-control" id="DDL" disabled="disabled" style="font-size: 14px;">
-															<option>McDonald's</option>
-															<option>KFC</option>
-															</select>
-
-															</label>
-													</th>
-
-													<th style="display:inline-block; font-size: 14px; border: none; " >
-														<label for="food" align="center">Courier&nbsp;
-															<input type="checkbox" name="food" id="food1" onclick="checkenable1(this)">
-															<select class="form-control" id="DDL1" disabled="disabled" style="font-size: 14px;">
-															<option>McDonald's</option>
-															<option>KFC</option>
-															</select>
-														</label>
+															<th style="display:inline-block; font-size: 14px; border: none; " >
+																<label for="food" align="center">Courier&nbsp;
+																	<input type="checkbox" name="food" id="food1" onclick="">
+																	<!-- <select class="form-control" id="DDL1" disabled="disabled" style="font-size: 14px;">
+																	<option>McDonald's</option>
+																	<option>KFC</option>
+																	</select> -->
+																</label>
 
 
-													</th>
+															</th>
 
-													<th style="display:inline-block; font-size: 14px; border: none;">
-														<label for="food" align="center">Passenger&nbsp;
-															<input type="checkbox" name="food" id="food2" onclick="checkenable2(this)">
-															<select class="form-control" id="DDL2" disabled="disabled" style="font-size: 14px;">
-															<option>McDonald's</option>
-															<option>KFC</option>
-															</select>
-														</label>
+															<th style="display:inline-block; font-size: 14px; border: none;">
+																<label for="food" align="center">Passenger&nbsp;
+																	<input type="checkbox" name="food" id="food2" onclick="">
+																	<!-- <select class="form-control" id="DDL2" disabled="disabled" style="font-size: 14px;">
+																	<option>McDonald's</option>
+																	<option>KFC</option>
+																	</select> -->
+																</label>
 
-													</th>
+															</th>
 
-													</tr>
-													<tr style="border: solid white">
-													<th>Travel Mode</th>
-													<td>
-														<select class="form-control">
-														<option>Bicycle</option>
-														<option>Bike / 2 Wheeler</option>
-														<option>Car</option>
-														<option>Truck</option>
-														</select>
-													</td>
-													</tr>
-
-											</thead>
-
-										</table>
-
-
-								</div>
-
+															</tr>
+															<tr style="border: solid white">
+															<th>Travel Mode</th>
+															<td>
+																<select class="form-control">
+																<option>Bicycle</option>
+																<option>Bike / 2 Wheeler</option>
+																<option>Car</option>
+																<option>Truck</option>
+																</select>
+															</td>
+															</tr>
+													</thead>
+												</table>
+											</div>
+										</div>
 									</div>
-
-								</div>
 								<!-- /.card -->
 
 								<!-- Bootstrap Switch -->
 
 								<!-- /.card -->
-								<div align="right" id="outer">
+									<div align="right" id="outer">
 
-									<div align="right" class="inner" style="margin-right:30px;"><button type="submit" onclick="" class="buttonedit">Edit Profile</button></div>
-									<div align="right" class="inner" style="margin-right:20px;"><button type="submit" onclick="" class="buttonedit">Save</button></div>
+										<div align="right" class="inner" style="margin-right:30px;"><button type="submit" onclick="" class="buttonedit">Edit Profile</button></div>
+										<div align="right" class="inner" style="margin-right:20px;"><button type="submit" onclick="" class="buttonedit">Save</button></div>
 
+									</div>
 								</div>
 							</div>
-						</div>
 						<!-- /.row -->
-					</div>
+						</div>
 					<!-- /.container-fluid -->
-				</div>
+					</div>
 				<!-- /.content -->
-			</div>
+				</div>
 			<!-- /.content-wrapper -->
-
+			</div>
 			<!-- Control Sidebar -->
 			<aside class="control-sidebar control-sidebar-dark">
 				<!-- Control sidebar content goes here -->
@@ -600,13 +346,14 @@
 			<!-- /.control-sidebar -->
 
 			<!-- Main Footer -->
-			<footer class="main-footer" style="margin-left:0px;">
+			<footer class="main-footer">
 				<strong>Copyright &copy; 2014-2021 <a href="#">Ziggy</a>.</strong>
 				All rights reserved.
 				<div class="float-right d-none d-sm-inline-block">
 					<b>Version</b> 0.0.1
 				</div>
 			</footer>
+		
 		</div>
 		<!-- ./wrapper -->
 
@@ -636,64 +383,64 @@
         });
       });
 
-  var overall = document.querySelector('input[id="EnchTbl"]');
-  var ingredients = document.querySelectorAll('ul input');
+//   var overall = document.querySelector('input[id="EnchTbl"]');
+//   var ingredients = document.querySelectorAll('ul input');
 
-  overall.addEventListener('click', function(e) {
-    e.preventDefault();
-  });
+//   overall.addEventListener('click', function(e) {
+//     e.preventDefault();
+//   });
 
-  for(var i = 0; i < ingredients.length; i++) {
-    ingredients[i].addEventListener('click', updateDisplay);
-  }
+//   for(var i = 0; i < ingredients.length; i++) {
+//     ingredients[i].addEventListener('click', updateDisplay);
+//   }
 
-  function updateDisplay() {
-    var checkedCount = 0;
-    for(var i = 0; i < ingredients.length; i++) {
-      if(ingredients[i].checked) {
-        checkedCount++;
-      }
-    }
+//   function updateDisplay() {
+//     var checkedCount = 0;
+//     for(var i = 0; i < ingredients.length; i++) {
+//       if(ingredients[i].checked) {
+//         checkedCount++;
+//       }
+//     }
 
-    if(checkedCount === 0) {
-      overall.checked = false;
-      overall.indeterminate = false;
-    } else if(checkedCount === ingredients.length) {
-      overall.checked = true;
-      overall.indeterminate = false;
-    } else {
-      overall.checked = false;
-      overall.indeterminate = true;
-    }
-  }
+//     if(checkedCount === 0) {
+//       overall.checked = false;
+//       overall.indeterminate = false;
+//     } else if(checkedCount === ingredients.length) {
+//       overall.checked = true;
+//       overall.indeterminate = false;
+//     } else {
+//       overall.checked = false;
+//       overall.indeterminate = true;
+//     }
+//   }
 // Copy to Clipboard
-function checkenable(food){
-	var ddl = document.getElementById("DDL");
-	ddl.disabled = food.checked ? false : true;
-	if(!ddl.disabled)
-	{
-		ddl.focus();
-	}
+// function checkenable(food){
+// 	var ddl = document.getElementById("DDL");
+// 	ddl.disabled = food.checked ? false : true;
+// 	if(!ddl.disabled)
+// 	{
+// 		ddl.focus();
+// 	}
 
-}
-function checkenable1(food1){
-	var ddl = document.getElementById("DDL1");
-	ddl.disabled = food1.checked ? false : true;
-	if(!ddl.disabled)
-	{
-		ddl.focus();
-	}
+// }
+// function checkenable1(food1){
+// 	var ddl = document.getElementById("DDL1");
+// 	ddl.disabled = food1.checked ? false : true;
+// 	if(!ddl.disabled)
+// 	{
+// 		ddl.focus();
+// 	}
 
-}
-function checkenable2(food2){
-	var ddl = document.getElementById("DDL2");
-	ddl.disabled = food2.checked ? false : true;
-	if(!ddl.disabled)
-	{
-		ddl.focus();
-	}
+// }
+// function checkenable2(food2){
+// 	var ddl = document.getElementById("DDL2");
+// 	ddl.disabled = food2.checked ? false : true;
+// 	if(!ddl.disabled)
+// 	{
+// 		ddl.focus();
+// 	}
 
-}
+// }
     </script>
 	</body>
 </html>
