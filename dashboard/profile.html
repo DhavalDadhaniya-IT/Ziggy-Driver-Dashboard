@@ -86,7 +86,7 @@
 			}
 			.inner{
 				display: inline-block;
-				float: right;
+				/* float: right; */
 			}
 			</style>
 	</head>
@@ -270,39 +270,23 @@
 															<th style="display:inline-block; font-size: 14px; border: none;">
 																<label for="food" align="center">Food&nbsp;
 																	<input type="checkbox" name="food" id="food" onclick="">
-																	<!-- <select class="form-control" id="DDL" disabled="disabled" style="font-size: 14px;">
-																	<option>McDonald's</option>
-																	<option>KFC</option>
-																	</select> -->
-
 																	</label>
 															</th>
 
 															<th style="display:inline-block; font-size: 14px; border: none; " >
 																<label for="food" align="center">Courier&nbsp;
 																	<input type="checkbox" name="food" id="food1" onclick="">
-																	<!-- <select class="form-control" id="DDL1" disabled="disabled" style="font-size: 14px;">
-																	<option>McDonald's</option>
-																	<option>KFC</option>
-																	</select> -->
 																</label>
-
-
 															</th>
 
 															<th style="display:inline-block; font-size: 14px; border: none;">
 																<label for="food" align="center">Passenger&nbsp;
 																	<input type="checkbox" name="food" id="food2" onclick="">
-																	<!-- <select class="form-control" id="DDL2" disabled="disabled" style="font-size: 14px;">
-																	<option>McDonald's</option>
-																	<option>KFC</option>
-																	</select> -->
 																</label>
-
 															</th>
 
-															</tr>
-															<tr style="border: solid white">
+														</tr>
+														<tr style="border: solid white">
 															<th>Travel Mode</th>
 															<td>
 																<select class="form-control">
@@ -312,7 +296,19 @@
 																<option>Truck</option>
 																</select>
 															</td>
-															</tr>
+														</tr>
+														<tr>
+															<th>Shift Start</th>
+															<td>
+																<input type="datetime-local" >
+															</td>
+														</tr>
+														<tr style="border: solid white;">
+															<th>Shift End</th>
+															<td>
+																<input type="datetime-local" >
+															</td>
+														</tr>
 													</thead>
 												</table>
 											</div>
@@ -321,13 +317,38 @@
 								<!-- /.card -->
 
 								<!-- Bootstrap Switch -->
+									<div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<form>
+														<div class="form-group">Name:<input type="text"></div>
+														<div class="form-group">Mobile Number: <input type="number"></div>
+														<div class="form-gorup"></div>
+													</form>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-primary">Save changes</button>
+												</div>
+											</div>
+										</div>
+									</div>
 
 								<!-- /.card -->
 									<div align="right" id="outer">
-
-										<div align="right" class="inner" style="margin-right:30px;"><button type="submit" onclick="" class="buttonedit">Edit Profile</button></div>
-										<div align="right" class="inner" style="margin-right:20px;"><button type="submit" onclick="" class="buttonedit">Save</button></div>
-
+										<div align="right" class="inner" style="margin-right:30px;" id="editbt">
+											<button type="submit" onclick="onEdit()" class="buttonedit" data-toggle="modal" data-target="#EditModal">Edit Profile</button>
+										</div>
+										<div align="right" class="inner" style="margin-right:20px;">
+											<button type="submit" onclick="" class="buttonedit">Save</button>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -382,65 +403,12 @@
           $(this).bootstrapSwitch("state", $(this).prop("checked"));
         });
       });
-
-//   var overall = document.querySelector('input[id="EnchTbl"]');
-//   var ingredients = document.querySelectorAll('ul input');
-
-//   overall.addEventListener('click', function(e) {
-//     e.preventDefault();
-//   });
-
-//   for(var i = 0; i < ingredients.length; i++) {
-//     ingredients[i].addEventListener('click', updateDisplay);
-//   }
-
-//   function updateDisplay() {
-//     var checkedCount = 0;
-//     for(var i = 0; i < ingredients.length; i++) {
-//       if(ingredients[i].checked) {
-//         checkedCount++;
-//       }
-//     }
-
-//     if(checkedCount === 0) {
-//       overall.checked = false;
-//       overall.indeterminate = false;
-//     } else if(checkedCount === ingredients.length) {
-//       overall.checked = true;
-//       overall.indeterminate = false;
-//     } else {
-//       overall.checked = false;
-//       overall.indeterminate = true;
-//     }
-//   }
-// Copy to Clipboard
-// function checkenable(food){
-// 	var ddl = document.getElementById("DDL");
-// 	ddl.disabled = food.checked ? false : true;
-// 	if(!ddl.disabled)
-// 	{
-// 		ddl.focus();
-// 	}
-
-// }
-// function checkenable1(food1){
-// 	var ddl = document.getElementById("DDL1");
-// 	ddl.disabled = food1.checked ? false : true;
-// 	if(!ddl.disabled)
-// 	{
-// 		ddl.focus();
-// 	}
-
-// }
-// function checkenable2(food2){
-// 	var ddl = document.getElementById("DDL2");
-// 	ddl.disabled = food2.checked ? false : true;
-// 	if(!ddl.disabled)
-// 	{
-// 		ddl.focus();
-// 	}
-
-// }
     </script>
+	<script>
+		function onEdit(){
+			console.log("Hello");
+			var parent = document.getElementById('dname');
+		}
+	</script>
 	</body>
 </html>
