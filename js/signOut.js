@@ -9,11 +9,12 @@ function signOut(){
 	
 	console.log(cognitoUser);
 	if (cognitoUser == null){
-		window.location.href = "../../index.html";
+		window.location.href = "../../login.html";
 	}
 	else{
 		alert("You are about to signout");
 		cognitoUser.signOut();
-		window.location.href = "../../index.html";
+		window.localStorage.removeItem("access_token");
+		window.location.href = "../../login.html";
 	}
 }

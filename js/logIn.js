@@ -48,7 +48,7 @@ function logIn(){
                 }
             });
 
-            // console.log(accessToken);
+            console.log(accessToken);
             localStorage.setItem('access_token', accessToken);
 
             window.location.href = "dashboard/dashboard.html";

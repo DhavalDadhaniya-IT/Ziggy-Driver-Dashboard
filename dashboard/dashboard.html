@@ -24,8 +24,10 @@
     <script src="../js/config.js"></script>
     <script type="text/javascript" src="../js/signout.js"></script>
     <script type="text/javascript" src="../js/fetch-driver-data.js"></script>
+    <!-- <script type="text/javascript" src="../js/authenticate-token.js"></script> -->
+    <script type="text/javascript" src="../js/dashboard-authentication.js"></script>
   </head>
-  <body class="hold-transition sidebar-mini" onload="fetchDriverData()">
+  <body class="hold-transition sidebar-mini" onload="dashboard_authenticate_token(); fetchDriverData()">
     <div class="wrapper">
       <!-- Navbar -->
       <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -234,6 +236,7 @@
                         })
                         .then((response) => {
                           directionsRenderer.setDirections(response);
+                          console.log(response);
                         })
                         .catch((e) => window.alert("Directions request failed due to " + status));
                     }
