@@ -17,12 +17,19 @@ function fetchDriverData() {
     .then((response) => response.json())
     //Then with the data from the response in JSON...
     .then((data) => {
-        console.log('Success:', data);
-        document.getElementById("driver_name").innerHTML = data["data"].Name.S;
-        document.getElementById("dname").innerHTML = data["data"].Name.S;
-        document.getElementById("demail").innerHTML = data["data"].Email_Id.S;
-        document.getElementById("dphone").innerHTML = data["data"].Mobile_Number.N;
-        document.getElementById("d2_name").innerHTML = data["data"].Name.S;
+        // console.log('Success:', data);
+        var driver_name = data["data"].Name.S;
+        var driver_email = data["data"].Email_Id.S;
+        var mobile_number = data["data"].Mobile_Number.S;
+        var travel_mode = data["data"].Travel_Mode.S;
+        document.getElementById("dname").innerHTML = driver_name;
+        document.getElementById("driverName").innerHTML = driver_name;
+        document.getElementById("driver_name").innerHTML = driver_name;
+        document.getElementById("d2_name").innerHTML = driver_name;
+        document.getElementById("demail").innerHTML = driver_email;
+        document.getElementById("driverEmail").innerHTML = driver_email;
+        document.getElementById("dphone").innerHTML = mobile_number;
+        document.getElementById("travel-mode").innerHTML = travel_mode;
     })
     //Then with the error genereted...
     .catch((error) => {

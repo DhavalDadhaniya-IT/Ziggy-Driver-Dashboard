@@ -21,6 +21,8 @@
 		<link rel="stylesheet" href="dist/css/adminlte.min.css" />
 		<script type="text/javascript" src="../js/signout.js"></script>
 		<script type="text/javascript" src="../js/fetch-driver-data.js"></script>
+		<script type="text/javascript" src="../js/update-driver-data.js"></script>
+		<script type="text/javascript" src="../js/profile-authentication.js"></script>
 		<style>
 
 			.flex-container {
@@ -91,7 +93,7 @@
 			</style>
 	</head>
 
-	<body class="hold-transition sidebar-mini" onload="fetchDriverData()">
+	<body class="hold-transition sidebar-mini" onload="profile_authenticate_token(); fetchDriverData()">
 		<div class="wrapper">
 			<!-- Navbar -->
 			<nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -265,7 +267,7 @@
 															<!-- <td>alex@ziggy.com</td> -->
 															<td><span id="demail"></span></td>
 														</tr>
-														<tr style="border: solid white">
+														<!-- <tr style="border: solid white">
 															<th>Service Type</th>
 															<th style="display:inline-block; font-size: 14px; border: none;">
 																<label for="food" align="center">Food&nbsp;
@@ -284,7 +286,6 @@
 																	<input type="checkbox" name="food" id="food2" onclick="">
 																</label>
 															</th>
-
 														</tr>
 														<tr style="border: solid white">
 															<th>Travel Mode</th>
@@ -308,6 +309,14 @@
 															<td>
 																<input type="datetime-local" >
 															</td>
+														</tr> -->
+														<tr style="border: solid white">
+															<th>Service Type</th>
+															<td><span id="service-type"></span></td>
+														</tr>
+														<tr style="border: solid white">
+															<th>Travel Mode</th>
+															<td><span id="travel-mode"></span></td>
 														</tr>
 													</thead>
 												</table>
@@ -321,33 +330,63 @@
 										<div class="modal-dialog" role="document">
 											<div class="modal-content">
 												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+													<h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
 													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 														<span aria-hidden="true">&times;</span>
 													</button>
 												</div>
 												<div class="modal-body">
 													<form>
-														<div class="form-group">Name:<input type="text"></div>
-														<div class="form-group">Mobile Number: <input type="number"></div>
-														<div class="form-gorup"></div>
+														<div class="form-group">
+															<b>Name:</b> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+															<span id="driverName"></span>
+														</div>
+
+														<div class="form-group">
+															<b>Email:</b> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+															<span id="driverEmail"></span>
+														</div>
+
+														<div class="form-group">
+															<b>Mobile Number:</b> &emsp;&emsp;
+															<input type="tel"  id="driverPhone" name="phone"  placeholder="9876543210" pattern="[1-9]{1}[0-9]{9}" maxlength="10" required>
+														</div>
+
+														<div class="my-4">
+															<b>Shift Start:</b> &emsp;&emsp;&emsp;&emsp;&nbsp;
+															<input type="datetime-local" id="shiftStart">
+														</div>
+
+														<div class="my-4">
+															<b>Shift End:</b> &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+															<input type="datetime-local" id="shiftEnd">
+														</div>
+														<div class="form-group">
+															<b>Travel Mode:</b> &emsp;&emsp;&emsp;&nbsp;
+															<select id="travelMode">
+																<option>Bicycle</option>
+																<option>Bike / 2 Wheeler</option>
+																<option>Car</option>
+																<option>Truck</option>
+															</select>
+														</div>
+														<div class="my-4">
+															<b>Service Type:</b> &emsp;&emsp;&emsp;
+															<input type="checkbox" id="food" value="food"> <b>Food</b>&emsp;
+															<input type="checkbox" id="courier" value="courier"> <b>Courier</b>&emsp;
+															<input type="checkbox" id="passanger" value="passanger"> <b>Passanger</b>&emsp;
+														</div>
 													</form>
 												</div>
 												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-													<button type="button" class="btn btn-primary">Save changes</button>
+													<button type="button" class="btn btn-primary" onclick="updateDriverProfile()">Save changes</button>
 												</div>
 											</div>
 										</div>
 									</div>
-
-								<!-- /.card -->
 									<div align="right" id="outer">
-										<div align="right" class="inner" style="margin-right:30px;" id="editbt">
-											<button type="submit" onclick="onEdit()" class="buttonedit" data-toggle="modal" data-target="#EditModal">Edit Profile</button>
-										</div>
-										<div align="right" class="inner" style="margin-right:20px;">
-											<button type="submit" onclick="" class="buttonedit">Save</button>
+										<div align="right" class="inner" id="editbt" style="margin-right:30px;">
+											<button type="submit" onclick="" class="buttonedit" data-toggle="modal" data-target="#EditModal">Update Profile</button>
 										</div>
 									</div>
 								</div>
@@ -404,11 +443,5 @@
         });
       });
     </script>
-	<script>
-		function onEdit(){
-			console.log("Hello");
-			var parent = document.getElementById('dname');
-		}
-	</script>
 	</body>
 </html>
