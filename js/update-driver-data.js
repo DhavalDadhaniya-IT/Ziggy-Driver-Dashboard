@@ -15,9 +15,7 @@ function updateDriverProfile() {
 		Shift_Start: document.getElementById("shiftStart").value,
         Shift_End: document.getElementById("shiftEnd").value,
         Travel_Mode: document.getElementById("travelMode").value,
-        Service_Type_Food: document.getElementById("food").value,
-        Service_Type_Courier: document.getElementById("courier").value,
-        Service_Type_Passenger: document.getElementById("passanger").value,
+        Service_Type : [document.getElementById("food").value, document.getElementById("courier").value, document.getElementById("passanger").value]
 	}),
 	headers: {
 		'Content-type': 'application/json'

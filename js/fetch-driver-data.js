@@ -19,16 +19,22 @@ function fetchDriverData() {
     .then((data) => {
         // console.log('Success:', data);
         var driver_name = data["data"].Name.S;
-        var driver_email = data["data"].Email_Id.S;
-        var mobile_number = data["data"].Mobile_Number.S;
-        var travel_mode = data["data"].Travel_Mode.S;
+        document.getElementById("driver_name").innerHTML = driver_name;
         document.getElementById("dname").innerHTML = driver_name;
         document.getElementById("driverName").innerHTML = driver_name;
-        document.getElementById("driver_name").innerHTML = driver_name;
         document.getElementById("d2_name").innerHTML = driver_name;
+        
+        var driver_email = data["data"].Email_Id.S;
         document.getElementById("demail").innerHTML = driver_email;
         document.getElementById("driverEmail").innerHTML = driver_email;
+        
+        var mobile_number = data["data"].Mobile_Number.S;
         document.getElementById("dphone").innerHTML = mobile_number;
+
+        var service_type = [data["data"].Service_Type.L[0].S, data["data"].Service_Type.L[1].S, data["data"].Service_Type.L[2].S];
+        document.getElementById("service-type").innerHTML = service_type.join(",  ");
+        
+        var travel_mode = data["data"].Travel_Mode.S;
         document.getElementById("travel-mode").innerHTML = travel_mode;
     })
     //Then with the error genereted...
