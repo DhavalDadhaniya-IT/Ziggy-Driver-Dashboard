@@ -27,6 +27,7 @@ function updateDriverProfile() {
         return Promise.reject(response);
     }).then(function (data) {
         console.log(data);
+        location.reload();
     }).catch(function (error) {
         console.warn('Something went wrong.', error);
     });
